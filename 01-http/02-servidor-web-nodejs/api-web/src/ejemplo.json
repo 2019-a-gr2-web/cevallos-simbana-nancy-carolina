@@ -1,0 +1,23 @@
+[
+  {
+    "llave":"valor",
+    "nombre":"Caro",
+    "edad":24,
+    "sueldo":3.24,
+    "casado":false,
+    "hijos":null,
+    "mascotas":[
+      "firulais",
+      1,
+      1.1,
+      true,
+      null,
+      {
+        "nombre":"firulais",
+        "edad":1
+      }
+
+    ]
+  }
+  //un json puede soportar onjetos json o arreglos de json
+]
