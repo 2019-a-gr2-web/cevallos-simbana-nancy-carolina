@@ -38,6 +38,7 @@ export class AppController {
     }else {
         return ':('
     }
+
      /* let nombre = 'Caro'; //String
       let edad=24;//number
       let sueldo = 10.20;//number
@@ -48,6 +49,64 @@ export class AppController {
 
 
   }
+
+        // ?llave=valor&llave2=valor2
+    @Get('/consultar')
+    consultar(@Query() queryParams){
+        if(queryParams.nombre){
+            return `Hola ${queryParams.nombre}`
+        }else{
+            return  `Hola extraño`
+        }
+    }
+
+    @Get('/ciudad/:idCiudad')
+    ciudad(@Params() parametrosRuta){
+      switch (parametrosRuta.idCiudad.toLowerCase()) {
+          case 'quito':
+              return 'Que fueff';
+          case 'quayaquil':
+              return 'Que maah ñañoshh';
+          default:
+              return  'Buenas tardes';
+      }
+    }
+
+    @Post('registroComida')
+    registroComida(
+        @Body() parametrosCuerpo,
+        @Response() response
+        //@Request() request
+    ){
+      if(parametrosCuerpo.nombre && parametrosCuerpo.cantidad){
+          //return 'Registro creado';
+          const cantidad=Number(parametrosCuerpo.cantidad);
+          if(cantidad>1){
+              response.set('Premio','Fanesca');
+          }
+
+          return response.send({mensaje:'Registro Creado'});
+      }else {
+          //return 'ERROR, no envía nombre o cantidad';
+          return  response.status(400)
+              .send({
+                  mensaje: 'ERROR, no envia nombre o cantidad',
+                  error:400
+              });
+      }
+    }
+
+    @Get('/semilla')
+    semilla(@Request request){
+      console.log((request.cookies));
+      const cookies = request.cookies;
+      if(cookies.micookie){
+          return 'ok'
+      }else {
+          return ':('
+      }
+    }
+
 }
 
 /*
