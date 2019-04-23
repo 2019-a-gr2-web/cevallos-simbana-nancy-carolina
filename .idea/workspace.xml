@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3162bc1-0e27-439e-9df0-12566a281521" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Deberes/01-calculadora/calculadora/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/tslint.json" beforeDir="false" afterPath="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/tslint.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Deberes/01-calculadora/calculadora/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Deberes/01-calculadora/calculadora/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Deberes/01-calculadora/calculadora/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Deberes/01-calculadora/calculadora/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Deberes/01-calculadora/calculadora/src/app.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Deberes/01-calculadora/calculadora/src/app.controller.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,57 +20,15 @@
     <favorites_list name="cevallos-simbana-nancy-carolina" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.controller.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-442">
-              <caret line="55" column="20" selection-start-line="55" selection-start-column="20" selection-end-line="55" selection-end-column="20" />
-              <folding>
-                <element signature="e#0#94#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Deberes/01-calculadora/calculadora/src/main.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-              <folding>
-                <element signature="e#0#43#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Deberes/01-calculadora/calculadora/src/app.controller.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="62" lean-forward="true" selection-start-line="2" selection-end-line="62" />
+            <state relative-caret-position="340">
+              <caret line="20" column="27" lean-forward="true" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
               <folding>
-                <element signature="e#0#101#0" expanded="true" />
+                <element signature="e#0#107#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Deberes/01-calculadora/calculadora/tslint.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="34" lean-forward="true" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Deberes/01-calculadora/calculadora/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-340">
-              <caret line="13" column="33" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -92,7 +48,7 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Deberes/01-calculadora/calculadora" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -101,14 +57,16 @@
         <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/main.ts" />
         <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.controller.ts" />
         <option value="$PROJECT_DIR$/Deberes/01-calculadora/calculadora/.gitignore" />
-        <option value="$PROJECT_DIR$/Deberes/01-calculadora/calculadora/src/app.controller.ts" />
         <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/tslint.json" />
         <option value="$PROJECT_DIR$/Deberes/01-calculadora/calculadora/src/main.ts" />
+        <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.controller.spec.ts" />
+        <option value="$PROJECT_DIR$/Deberes/01-calculadora/calculadora/src/app.controller.ts" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="109" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1264" />
     <option name="height" value="745" />
   </component>
@@ -120,61 +78,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="cevallos-simbana-nancy-carolina" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="C:\Users\Carolina\Documents\GitHub\cevallos-simbana-nancy-carolina" type="442cc68d:ScopeViewTreeModel$RootNode" />
-            </path>
-            <path>
-              <item name="cevallos-simbana-nancy-carolina" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="C:\Users\Carolina\Documents\GitHub\cevallos-simbana-nancy-carolina" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="01-http" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="cevallos-simbana-nancy-carolina" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="C:\Users\Carolina\Documents\GitHub\cevallos-simbana-nancy-carolina" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="01-http" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="02-servidor-web-nodejs" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="cevallos-simbana-nancy-carolina" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="C:\Users\Carolina\Documents\GitHub\cevallos-simbana-nancy-carolina" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="01-http" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="02-servidor-web-nodejs" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="api-web" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="cevallos-simbana-nancy-carolina" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="C:\Users\Carolina\Documents\GitHub\cevallos-simbana-nancy-carolina" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="01-http" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="02-servidor-web-nodejs" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="api-web" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="cevallos-simbana-nancy-carolina" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="C:\Users\Carolina\Documents\GitHub\cevallos-simbana-nancy-carolina" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="Deberes" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="cevallos-simbana-nancy-carolina" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="C:\Users\Carolina\Documents\GitHub\cevallos-simbana-nancy-carolina" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="Deberes" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="01-calculadora" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="cevallos-simbana-nancy-carolina" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="C:\Users\Carolina\Documents\GitHub\cevallos-simbana-nancy-carolina" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="Deberes" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="01-calculadora" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="calculadora" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -221,12 +124,60 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="cevallos-simbana-nancy-carolina" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\Users\Carolina\Documents\GitHub\cevallos-simbana-nancy-carolina" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+            <path>
+              <item name="cevallos-simbana-nancy-carolina" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\Users\Carolina\Documents\GitHub\cevallos-simbana-nancy-carolina" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="01-http" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="cevallos-simbana-nancy-carolina" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\Users\Carolina\Documents\GitHub\cevallos-simbana-nancy-carolina" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="01-http" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="02-servidor-web-nodejs" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="cevallos-simbana-nancy-carolina" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\Users\Carolina\Documents\GitHub\cevallos-simbana-nancy-carolina" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="Deberes" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="cevallos-simbana-nancy-carolina" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\Users\Carolina\Documents\GitHub\cevallos-simbana-nancy-carolina" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="Deberes" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="01-calculadora" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="cevallos-simbana-nancy-carolina" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\Users\Carolina\Documents\GitHub\cevallos-simbana-nancy-carolina" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="Deberes" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="01-calculadora" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="calculadora" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="cevallos-simbana-nancy-carolina" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\Users\Carolina\Documents\GitHub\cevallos-simbana-nancy-carolina" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="Deberes" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="01-calculadora" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="calculadora" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/nodemon.json" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Deberes/01-calculadora/calculadora/src" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
@@ -234,6 +185,11 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="settings.nodejs" />
     <property name="ts.external.directory.path" value="C:\Users\Carolina\Documents\GitHub\cevallos-simbana-nancy-carolina\01-http\02-servidor-web-nodejs\api-web\node_modules\typescript\lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Carolina\Documents\GitHub\cevallos-simbana-nancy-carolina\Deberes\01-calculadora\calculadora\src" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -246,6 +202,15 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="run" type="js.build_tools.npm" nameIsGenerated="true">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="node" />
+      <envs />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -265,32 +230,41 @@
       <workItem from="1555775747066" duration="362000" />
       <workItem from="1555954552539" duration="589000" />
       <workItem from="1555977647978" duration="2908000" />
-      <workItem from="1555987788779" duration="6468000" />
+      <workItem from="1555987788779" duration="8371000" />
+      <workItem from="1556045781758" duration="1276000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24699000" />
+    <option name="totallyTimeSpent" value="27878000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="109" y="0" width="1264" height="745" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18026102" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4983165" visible="true" weight="0.16443452" />
+      <window_info id="Structure" order="1" sideWeight="0.5016835" side_tool="true" weight="0.18026102" />
+      <window_info id="Favorites" order="2" sideWeight="0.5016835" side_tool="true" weight="0.18026102" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49918434" weight="0.32843137" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32986626" />
       <window_info anchor="bottom" id="TypeScript" order="9" weight="0.34640524" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.80831975" weight="0.5147059" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.19168027" side_tool="true" visible="true" weight="0.5147059" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.8035714" visible="true" weight="0.28824475" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.19642857" side_tool="true" visible="true" weight="0.28824475" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -340,9 +314,6 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tsconfig.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/nodemon.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -373,33 +344,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Deberes/01-calculadora/calculadora/.gitignore">
+    <entry file="file://$PROJECT_DIR$/Deberes/01-calculadora/calculadora/tslint.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.controller.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-442">
-          <caret line="55" column="20" selection-start-line="55" selection-start-column="20" selection-end-line="55" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#94#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Deberes/01-calculadora/calculadora/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-340">
-          <caret line="13" column="33" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="33" />
+        <state relative-caret-position="119">
+          <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-867" />
+        <state relative-caret-position="-254">
+          <caret line="30" column="32" lean-forward="true" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/tslint.json">
@@ -409,15 +365,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Deberes/01-calculadora/calculadora/src/app.controller.ts">
+    <entry file="file://$PROJECT_DIR$/Deberes/01-calculadora/calculadora/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="62" lean-forward="true" selection-start-line="2" selection-end-line="62" />
+        <state relative-caret-position="-492">
+          <caret line="13" column="33" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Deberes/01-calculadora/calculadora/nodemon.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Deberes/01-calculadora/calculadora/nest-cli.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Deberes/01-calculadora/calculadora/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Deberes/01-calculadora/calculadora/src/tsconfig.json" />
+    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tsconfig.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Deberes/01-calculadora/calculadora/src/app.controller.spec.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="13" lean-forward="true" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding>
-            <element signature="e#0#101#0" expanded="true" />
+            <element signature="e#0#54#0" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Deberes/01-calculadora/calculadora/src/app.service.ts">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Deberes/01-calculadora/calculadora/src/main.ts">
       <provider selected="true" editor-type-id="text-editor">
@@ -429,10 +412,63 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Deberes/01-calculadora/calculadora/tslint.json">
+    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.controller.spec.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="34" lean-forward="true" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
+        <state relative-caret-position="204">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="e#0#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Deberes/01-calculadora/calculadora/src/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/node_modules/ts-node/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-221">
+          <caret line="5" column="5" lean-forward="true" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="28" lean-forward="true" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#94#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Deberes/01-calculadora/calculadora/node_modules/ts-node/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1774" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Deberes/01-calculadora/calculadora/src/app.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="27" lean-forward="true" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#107#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
