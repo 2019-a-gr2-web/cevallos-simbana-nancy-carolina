@@ -7,7 +7,7 @@ export class AppController {
 
   @Get('/suma')
   @HttpCode(200)
-  suma(@HEADERS() headers,@Response() response ){
+  suma(@Headers() headers,@Response() response ){
     if(headers.numeroUno!=null && headers.numeroDos!=null){
       const totalSuma=Number(headers.numeroUno)+Number(headers.numeroDos);
       return  response.status(200).send('la suma de :'+headers.numeroUno+' + '+headers.numeroDos+' es: '+totalSuma);
