@@ -1,113 +1,183 @@
-import {Controller, Delete, Get, Headers, Response,HttpCode, Post, Put} from '@nestjs/common';
-import { AppService } from './app.service';
-import {consoleTestResultsHandler} from "../node_modules/tslint/lib/test";
-
-//http://192.168.1.10:3000/ segmento inicial
-//http://192.168.1.10.3000/mascotas/crear
-//http:://192.168.1.10.3000/mascotas/borrar
+import {Controller,Get,HttpCode,Post,Put, Delete,Headers,Query,Param,Body,Request,Response} from '@nestjs/common';
+import {AppService} from './app.service';
 
 
+import * as Joi from '@hapi/joi';
+
+// const Joi = require('@hapi/joi');
+
+
+// http://192.168.1.10:3000/segmentoInicial/segmentoAccion
+// http://192.168.1.10:3000/mascotas/crear
+// http://192.168.1.10:3000/mascotas/borrar
+// @Controller(segmentoInicial)
 @Controller('/api')
 export class AppController {
-  constructor(private readonly appService: AppService) {}
-  //@Controller(segmentoAccion)
-
-  @Get('/hello-world')  // METODO HTTP
-  helloWorld(): string {
-    return 'Hello world';
-  }
-  @Post('/hola-mundo' )  // METODO HTTP
-  holaMundo(){
-      return 'Hola mundo';
-  }
-  @Put('/bonjour-le-monde')
-  bonjourLeMonde(){
-    return 'Bonjour le monde';
-  }
-  @Delete('/ciao-mondo')
-  CiaoMondo(){
-    return 'Ciao mondo';
-  }
-  @Get('/adivina')
-  adivina(@Headers() headers):string{
-    console.log('Headers: ',headers);
-    const numeroRandomico=Math.fround(Math.random()*10);
-    const numeroDeCabecera=Number(headers.numero);
-    if(numeroDeCabecera==numeroRandomico){
-      return 'ok';
-    }else {
-        return ':('
+    constructor(private readonly appService: AppService) {
     }
 
-     /* let nombre = 'Caro'; //String
-      let edad=24;//number
-      let sueldo = 10.20;//number
-      let hijos = null;//null
-      let casado = false; //boolean
-      let ala = undefined; //undefined
-     */
+    // @Controller(segmentoAccion)
+    @Get('/hello-world')  // METODO HTTP
+    helloWorld(): string {
+        return 'Hello world';
+    }
+
+    // POST http://localhost:3000/api
+    @Post('/hola-mundo')  // METODO HTTP
+    holaMundo() {
+        return 'Hola mundo';
+    }
+
+    @Put('/salut-monde')  // METODO HTTP
+    salutMonde() {
+        return 'Salut monde';
+    }
+
+    @Delete('/ola-mundo')  // METODO HTTP
+    olaMundo() {
+        return 'Olá mundo';
+    }
 
 
-  }
+    @Get('/adivina')  // METODO HTTP
+    adivina(@Headers() headers): string {
+        console.log('Headers: ', headers);
+        const numeroRandomico = Math.round(Math.random() * 10);
+        const numeroDeCabecera = Number(headers.numero);
 
-        // ?llave=valor&llave2=valor2
-    @Get('/consultar')
-    consultar(@Query() queryParams){
-        if(queryParams.nombre){
+        if (numeroDeCabecera == numeroRandomico) {
+            return 'Ok';
+        } else {
+            return ':(';
+        }
+
+
+    }
+
+    // ?llave=valor&llave2=valor2
+    @Post('/consultar')
+    consultar(@Query() queryParams) {
+        console.log(queryParams);
+        if (queryParams.nombre) {
             return `Hola ${queryParams.nombre}`
-        }else{
-            return  `Hola extraño`
+        } else {
+            return 'Hola extraño'
         }
     }
 
     @Get('/ciudad/:idCiudad')
-    ciudad(@Params() parametrosRuta){
-      switch (parametrosRuta.idCiudad.toLowerCase()) {
-          case 'quito':
-              return 'Que fueff';
-          case 'quayaquil':
-              return 'Que maah ñañoshh';
-          default:
-              return  'Buenas tardes';
-      }
+    ciudad(@Param() parametrosRuta) {
+        switch (parametrosRuta.idCiudad.toLowerCase()) {
+            case 'quito':
+                return 'Que fueff';
+            case 'guayaquil':
+                return 'Que maah ñañoshh';
+            default:
+                return 'Buenas tardes';
+        }
     }
 
     @Post('registroComida')
     registroComida(
         @Body() parametrosCuerpo,
         @Response() response
-        //@Request() request
-    ){
-      if(parametrosCuerpo.nombre && parametrosCuerpo.cantidad){
-          //return 'Registro creado';
-          const cantidad=Number(parametrosCuerpo.cantidad);
-          if(cantidad>1){
-              response.set('Premio','Fanesca');
-          }
+    ) {
+        if (parametrosCuerpo.nombre && parametrosCuerpo.cantidad) {
+            const cantidad = Number(parametrosCuerpo.cantidad);
+            if (cantidad > 1) {
+                response.set('Premio', 'Fanesca');
+            }
+            return response.send({mensaje: 'Registro Creado'});
+        } else {
+            return response.status(400)
+                .send({
+                    mensaje: 'ERROR, no envia nombre o cantidad',
+                    error: 400
+                });
+        }
 
-          return response.send({mensaje:'Registro Creado'});
-      }else {
-          //return 'ERROR, no envía nombre o cantidad';
-          return  response.status(400)
-              .send({
-                  mensaje: 'ERROR, no envia nombre o cantidad',
-                  error:400
-              });
-      }
     }
 
     @Get('/semilla')
-    semilla(@Request request){
-      console.log((request.cookies));
-      const cookies = request.cookies;
-      if(cookies.micookie){
-          return 'ok'
-      }else {
-          return ':('
-      }
+    semilla(
+        @Request() request,
+        @Response() response
+    ) {
+        console.log(request.cookies);
+        const cookies = request.cookies; // JSON
+
+        const esquemaValidacionNumero = Joi
+            .object()
+            .keys({
+                numero: Joi.number().integer().required()
+            });
+
+        const objetoValidacion = {
+            numero: cookies.numero
+        };
+        const resultado = Joi.validate(objetoValidacion,
+            esquemaValidacionNumero);
+
+        if (resultado.error) {
+            console.log('Resultado: ', resultado);
+        } else {
+            console.log('Numero valido');
+        }
+
+        const cookieSegura = request.signedCookies.fechaServidor;
+        if(cookieSegura){
+            console.log('Cookie segura');
+        }else{
+            console.log('No es valida esta cookie');
+        }
+
+        if (cookies.micookie) {
+
+            const horaFechaServidor = new Date();
+            const minutos = horaFechaServidor.getMinutes();
+            horaFechaServidor.setMinutes(minutos + 1);
+
+            response.cookie(
+                'fechaServidor',      // NOMBRE (key)
+                new Date().getTime(),  // VALOR  (value)
+                {    // OPCIONES
+                    // expires: horaFechaServidor
+                    signed: true
+                }
+            );
+
+            return response.send('ok');
+        } else {
+            return response.send(':(');
+        }
+
     }
 
+
+    // js -> ts
+
+
+    /*
+    const nombre: string = 'Adrian'; // string
+    const edad = 29;  // number
+    const sueldo = 1.20;  // number
+    const casado = false;  // boolean
+    const hijos = null;  // null
+    const alas = undefined;  // undefined
+    */
+
+
+    /*
+    * Segmento inicial: /api
+    * 1) Segmento Accion: GET 'hello-world' -> 'Hello world'
+    * 2) Segmento Accion: POST 'hola-mundo' -> 'Hola mundo'
+    * 3) Segmento Accion: PUT '...' -> '....'
+    * 4) Segmento Accion: DELETE '..' -> '....'
+    * */
+
+
 }
+
 
 /*
 segmento inicial:/api
@@ -139,7 +209,7 @@ class usuario{
   protected metodoProtegido(){}
 }
 */
-
+/*
 const json=[
     {
         'llave':"valor",
@@ -162,9 +232,9 @@ const json=[
         ]
     }
     //un json puede soportar onjetos json o arreglos de json
-];
+];*/
 
-let objeto:any ={
+/*let objeto:any ={
     propiedad:'valor',
     propiedadDos:'valor2'
 }
@@ -173,6 +243,6 @@ objeto.propiedadDos
  //agregar propiedades a un objeto
 objeto.propiedadTres='valor3';
 objeto['propiedadTres']='valor 3';
-delete objeto.propiedadTres
+delete objeto.propiedadTres*/
 
 
