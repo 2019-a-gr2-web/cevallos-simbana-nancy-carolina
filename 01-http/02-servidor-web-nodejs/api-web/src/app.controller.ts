@@ -1,4 +1,4 @@
-import {Controller, Delete, Get, Headers, HttpCode, Post, Put} from '@nestjs/common';
+import {Controller, Delete, Get, Headers, Response,HttpCode, Post, Put} from '@nestjs/common';
 import { AppService } from './app.service';
 import {consoleTestResultsHandler} from "../node_modules/tslint/lib/test";
 
