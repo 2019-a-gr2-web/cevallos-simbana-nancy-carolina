@@ -3,6 +3,7 @@ import {AppService} from './app.service';
 
 
 import * as Joi from '@hapi/joi';
+import {map} from "rxjs/operators";
 
 // const Joi = require('@hapi/joi');
 
@@ -103,8 +104,8 @@ export class AppController {
         @Request() request,
         @Response() response
     ) {
-        console.log(request.cookies);
-        const cookies = request.cookies; // JSON
+        console.log(request.cookie);
+        const cookies = request.cookie; // JSON
 
         const esquemaValidacionNumero = Joi
             .object()
@@ -153,6 +154,12 @@ export class AppController {
 
     }
 
+    @Get('inicio')
+    inicio(
+        @Response() res
+    ){
+        return res.render('inicio');
+    }
 
     // js -> ts
 
@@ -245,4 +252,102 @@ objeto.propiedadTres='valor3';
 objeto['propiedadTres']='valor 3';
 delete objeto.propiedadTres*/
 
+function holaMundo() {
+    console.log(('Hola mundo'));
+}
+ const respuestaHolaMundo = holaMundo();//undefined
+console.log('Resp hola mundo:',respuestaHolaMundo);
 
+function suma(a:number,b:number) {
+    return a+b;
+}
+const  respuestaSuma=suma(1,2);
+console.log('Respu suma;',respuestaSuma);
+
+if("a"){
+    console.log('Verdadero "a"');
+}else{
+    console.log('Falso "a"');
+}
+if(0){
+    console.log('Verdadero "0"');
+}else{
+    console.log('Falso "0"');
+}
+if("0"){
+    console.log('Verdadero "0"');
+}else{
+    console.log('Falso "0"');
+}
+if(1){
+    console.log('Verdadero "1"');
+}else{
+    console.log('Falso "1"');
+}
+if(-1){
+    console.log('Verdadero "-1"');
+}else{
+    console.log('Falso "-1"');
+}
+if(null){
+    console.log('Verdadero "null"');
+}else{
+    console.log('Falso "null"');
+}
+if({}){//Trutty
+    console.log('Verdadero "0"');
+}else{
+    console.log('Falso "0"');
+}
+
+
+//OPERADORES DE ARREGLOS EN JS
+
+const  arreglo=[
+    function () {return '0'
+
+    }
+]
+
+const arreglosNumeros=[1,2,3,4,5,6];
+
+//1)imprimir en consola todos los elementos
+
+const arreglosNumerosForEach=[1,2,3,4,5,6];
+//const rForEach=arreglosNumerosForEach.forEach(n => console.log(`${n}`));
+//console.log(`Respuesta foreach: ${rForEach}`);
+
+//2) Sumar 2 a os pares y 1 a los impares
+const  arregloNumerosMap=[1,2,3,4,5,6];
+const rMap = arregloNumerosMap
+    .map(
+        (valorActual)=>{
+            const  esPar =valorActual % 2==0;
+            if(esPar){
+                return; valorActual+2;
+            }else {
+                return; valorActual+1;
+            }
+        }
+    );
+console.log(`RESPUSTA MAP: ${rMap}`);
+
+
+//3) Encontrar si existe el numero4
+    const  arregloNumerosFind=[1,2,3,4,5,6];
+    const rFind  =arregloNumerosFind
+        .find(
+            (valorActual)=>{
+                return valorActual==4;
+            }
+        );
+
+//4) filtrar los numeros menores a 5
+
+//5) todos los valores positivos
+
+//6) Algun valor es menor que2
+
+//7) sumar todos los valores
+
+//8) Restar los valores de 100
