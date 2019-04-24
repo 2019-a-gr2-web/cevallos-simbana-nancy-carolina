@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3162bc1-0e27-439e-9df0-12566a281521" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Deberes/02-cookies/01-cookie-insegura/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Deberes/02-cookies/01-cookie-insegura/src/app.controller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Deberes/02-cookies/01-cookie-insegura/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/main.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,32 +21,7 @@
     <favorites_list name="cevallos-simbana-nancy-carolina" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.controller.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1785">
-              <caret line="105" column="35" selection-start-line="105" selection-start-column="35" selection-end-line="105" selection-end-column="35" />
-              <folding>
-                <element signature="e#0#174#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/main.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="47" selection-start-line="2" selection-start-column="47" selection-end-line="2" selection-end-column="47" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -72,8 +47,12 @@
         <option value="$PROJECT_DIR$/Deberes/01-calculadora/calculadora/src/main.ts" />
         <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.controller.spec.ts" />
         <option value="$PROJECT_DIR$/Deberes/01-calculadora/calculadora/src/app.controller.ts" />
-        <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.controller.ts" />
         <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/main.ts" />
+        <option value="$PROJECT_DIR$/Deberes/02-cookies/1-cookie-segura/.gitignore" />
+        <option value="$PROJECT_DIR$/Deberes/02-cookies/1-cookie-segura/src/main.ts" />
+        <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.controller.ts" />
+        <option value="$PROJECT_DIR$/Deberes/02-cookies/1-cookie-segura/src/app.controller.ts" />
+        <option value="$PROJECT_DIR$/Deberes/02-cookies/01-cookie-insegura/src/main.ts" />
       </list>
     </option>
   </component>
@@ -147,27 +126,27 @@
             <path>
               <item name="cevallos-simbana-nancy-carolina" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="C:\Users\Carolina\Documents\GitHub\cevallos-simbana-nancy-carolina" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="01-http" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Deberes" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="cevallos-simbana-nancy-carolina" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="C:\Users\Carolina\Documents\GitHub\cevallos-simbana-nancy-carolina" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="01-http" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="02-servidor-web-nodejs" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Deberes" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="02-cookies" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="cevallos-simbana-nancy-carolina" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="C:\Users\Carolina\Documents\GitHub\cevallos-simbana-nancy-carolina" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="01-http" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="02-servidor-web-nodejs" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="api-web" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Deberes" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="02-cookies" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="01-cookie-insegura" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="cevallos-simbana-nancy-carolina" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="C:\Users\Carolina\Documents\GitHub\cevallos-simbana-nancy-carolina" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="01-http" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="02-servidor-web-nodejs" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="api-web" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Deberes" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="02-cookies" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="01-cookie-insegura" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
@@ -233,12 +212,13 @@
       <workItem from="1555954552539" duration="589000" />
       <workItem from="1555977647978" duration="2908000" />
       <workItem from="1555987788779" duration="8371000" />
-      <workItem from="1556045781758" duration="6583000" />
+      <workItem from="1556045781758" duration="6872000" />
+      <workItem from="1556072509722" duration="8342000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33185000" />
+    <option name="totallyTimeSpent" value="41816000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -250,10 +230,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-40" y="68" width="1264" height="745" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4983165" visible="true" weight="0.15823817" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4983165" visible="true" weight="0.14434524" />
       <window_info id="Structure" order="1" sideWeight="0.5016835" side_tool="true" weight="0.18026102" />
       <window_info id="Favorites" order="2" sideWeight="0.5016835" side_tool="true" weight="0.18026102" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -266,8 +245,8 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32986626" />
       <window_info anchor="bottom" id="TypeScript" order="9" weight="0.34640524" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.8026101" visible="true" weight="0.4232026" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.19738989" side_tool="true" visible="true" weight="0.4232026" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.8020833" visible="true" weight="0.32045087" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.19791667" side_tool="true" visible="true" weight="0.32045087" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -371,13 +350,6 @@
     <entry file="file://$PROJECT_DIR$/Deberes/01-calculadora/calculadora/nest-cli.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Deberes/01-calculadora/calculadora/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Deberes/01-calculadora/calculadora/src/tsconfig.json" />
     <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tsconfig.json">
       <provider selected="true" editor-type-id="text-editor" />
@@ -445,33 +417,64 @@
         <state relative-caret-position="-1774" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Deberes/01-calculadora/calculadora/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" selection-end-line="1" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Deberes/02-cookies/01-cookie-insegura/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="13" lean-forward="true" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Deberes/01-calculadora/calculadora/src/app.controller.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="170">
+          <caret line="23" column="50" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
           <folding>
             <element signature="e#0#107#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.controller.ts">
+    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/main.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1785">
-          <caret line="105" column="35" selection-start-line="105" selection-start-column="35" selection-end-line="105" selection-end-column="35" />
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" selection-end-column="46" />
           <folding>
-            <element signature="e#0#174#0" expanded="true" />
+            <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/main.ts">
+    <entry file="file://$PROJECT_DIR$/Deberes/02-cookies/01-cookie-insegura/src/main.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="47" selection-start-line="2" selection-start-column="47" selection-end-line="2" selection-end-column="47" />
+        <state relative-caret-position="170">
+          <caret line="10" column="12" lean-forward="true" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#43#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Deberes/02-cookies/01-cookie-insegura/src/app.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="17" column="42" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#78#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-918">
+          <caret line="133" column="31" selection-start-line="133" selection-start-column="31" selection-end-line="133" selection-end-column="31" />
         </state>
       </provider>
     </entry>
