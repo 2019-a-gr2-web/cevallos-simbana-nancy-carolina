@@ -344,10 +344,87 @@ console.log(`RESPUSTA MAP: ${rMap}`);
 
 //4) filtrar los numeros menores a 5
 
-//5) todos los valores positivos
 
-//6) Algun valor es menor que2
+//5) Todos los valor positivos
+const arregloNumerosEvery = [1, 2, 3, 4, 5, 6];
+const every = arregloNumerosEvery
+    .every(
+        (valorActual)=>{
+            return valorActual > 0
+        }
+    )
 
-//7) sumar todos los valores
+console.log(`Respuesta EVERY: ${every}`);
+//6) Algun valor es menor a 2
+const arregloNumerosSome = [1, 2, 3, 4, 5, 6];
 
-//8) Restar los valores de 100
+const some = arregloNumerosSome
+    .some(
+        (valorActual)=>{
+            return valorActual < 2
+        }
+    )
+console.log(`Respuesta SOME: ${some} `)
+
+//7) Sumen todos los valores
+const arregloNumerosReduce = [1, 2, 3, 4, 5, 6];
+const valorDondEmpiezaCalculo = 0;
+
+const reduce = arregloNumerosReduce
+    .reduce(
+        (acumulado,valorActual)=>{
+            return acumulado + valorActual;
+        }
+    )
+console.log(`Respuesta REDUCE: ${reduce} `)
+
+
+const arregloNumerosReduceResta = [1, 2, 3, 4, 5, 6];
+const valorDondEmpiezaCalculoResta = 0;
+const reduceResta = arregloNumerosReduce
+    .reduce(
+        (valorDondEmpiezaCalculoResta,valorActual)=>{
+            return valorDondEmpiezaCalculoResta - valorActual;
+        }
+    )
+console.log(`Respuesta REDUCE: ${reduceResta} `)
+
+
+const respuestaReduce=arregloNumerosReduce
+.reduce(
+    (acumulado,valorActual)=>{
+    if(valorActual<4){
+        return acumulado+valorActual*1.1+5;
+    }else{
+        return acumulado+valorActual*1.15+3;
+    }
+});
+console.log()
+
+
+//8) Resten todos los valores de 100
+
+    const arregloNumeroCien=[1,2,3,4,5,6];
+    const valorDondeEmpiezaCien=100;
+    const respuestaCien=arregloNumeroCien
+    .reduce((acumulado,valorActual)=>{
+
+    })
+
+
+
+//
+
+    const  arregloEjercicio=[1,2,3,4,5,6]
+    arregloEjercicio.
+    map((valorActual)=>{
+        return valorActual+10;  //suma 10
+    })
+    .filter((valorActual)=>{
+        return valorActual>15;  //>15
+    })
+    .some((valorActual)=>{
+        return valorActual>30;  //>30
+    })
+
+
