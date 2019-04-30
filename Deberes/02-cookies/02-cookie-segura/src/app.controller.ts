@@ -5,61 +5,113 @@ import { AppService } from './app.service';
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  @Get('/suma')
-  @HttpCode(200)
-  suma(@Headers() headers,@Response() response, @Request() request ){
-    const cookies=request.cookies;
-    const cookiesSeguras=request.signedCookies;
-    if(cookiesSeguras.puntos){
-      if(headers.numeroUno!=null && headers.numeroDos!=null){
-        const totalSuma=Number(headers.numeroUno)+Number(headers.numeroDos);
-        //return  response.status(200).send('la suma de :'+headers.numeroUno+' + '+headers.numeroDos+' es: '+totalSuma);
-        if(cookies.puntos>0){
-          const puntosSobrantes=Number(cookiesSeguras.puntos)-Number(totalSuma);
-          response.cookie('puntos',puntosSobrantes,{signed:true});
-        }else {
-          const jsonRespuesta={
-            'nombreUsuario':cookies.usuario,
-            'resultado':totalSuma,
-            'mensaje':'Se le terminaron los puntos'
-          }
-          response.send(jsonRespuesta);
+    @Get('/suma')
+    suma(@Headers() header,@Response() respuesta,@Request() req) {
+        const cookie = req.cookies;
+        const cookieSeg = req.signedCookies;
+
+        if(!cookieSeg.puntos){
+            respuesta.cookie('puntos',100,{signed:true});
         }
-      }else {
-        return response.status(400).send({mensaje:'Error, parámetros incorrecots',error:400})
-      }
-    }else {
-      response.cookie('puntos',100,{signed:true});
-      if(!cookies.usuario){
-        response.cookie('usuario','Carolina');
-      }
+        if(!cookie.nombreUsuario) {
+            respuesta.cookie('nombreUsuario', 'Carolina');
+        }
+        if(cookieSeg.puntos <= 0){
+            respuesta.send("Se termino los puntos");
+        }
+        if(header.numero1!=null && header.numero2!=null){
+            const resultado = Number(header.numero1) + Number(header.numero2);
+            console.log("Resultado de la suma es: "+resultado);
+            const resultadoJson = {
+                'nombreUsuario':cookie.nombreUsuario,
+                'resultado':resultado
+            }
+            const resCookie=cookieSeg.puntos;
+            if(!isNaN(resCookie)){
+                const resto = Number(cookieSeg.puntos) - Number(resultado);
+                cookieSeg.puntos = resto;
+                console.log(cookieSeg.puntos);
+                respuesta.cookie('puntos',resto,{signed:true})
+            }
+
+
+            return respuesta.status(200).send(resultadoJson);
+        }
+        else{
+            return respuesta.status(400).send('Error de parametros');
+        }
 
     }
-  }
 
   @Post('/resta')
   @HttpCode(201)
   resta(@Body() parametros,
-        @Response() response){
-    if(parametros.numeroUno!=null && parametros.numeroDos!=null){
-      const totalResta=Number(parametros.numeroUno)-Number(parametros.numeroDos);
-      return response.status(201).send('El resultado de la resta es: '+totalResta);
-    }else {
-      return response.status(400).send({mensaje:'Error, parámetros incorrectos',error:400})
-    }
+        @Response() respuesta,@Request() req) {
+      const cookie = req.cookies;
+      const cookieSeg = req.signedCookies;
+      if(!cookieSeg.puntos){
+          respuesta.cookie('puntos',100,{signed:true});
+      }
+      if(!cookie.nombreUsuario) {
+          respuesta.cookie('nombreUsuario', 'Carolina');
+      }
+      if(cookieSeg.puntos <= 0){
+          respuesta.send("Se termino los puntos");
+      }
+      if(parametros.numero1!=null && parametros.numero2!=null){
+          const resultado = Number(parametros.numero1) - Number(parametros.numero2);
+          console.log("Resultado de la suma es: "+resultado);
+          const resultadoJson = {
+              'nombreUsuario':cookie.nombreUsuario,
+              'resultado':resultado
+          }
+          const resto = cookieSeg.puntos - resultado;
+          cookieSeg.puntos = resto;
+          console.log(cookieSeg.puntos);
+          respuesta.cookie('puntos',resto,{signed:true})
+
+          return respuesta.status(200).send(resultadoJson);
+      }
+      else{
+          return respuesta.status(400).send('Error de parametros');
+      }
+
   }
 
   @Put('/producto')
   @HttpCode(203)
   producto(@Query() query,
-           @Response() response){
-    if(query.numeroUno!=null && query.numeroDos!=null){
-      const totalProducto=Number(query.numeroUno)*Number(query.numeroDos);
-      return response.status(203).send('El resultado de roducto es:'+totalProducto);
-    }else {
-      return response.status(400).send({mensaje:'Error, parámetros incorrectos',error:400})
+           @Response() respuesta,@Request() req) {
+    const cookie = req.cookies;
+    const cookieSeg = req.signedCookies;
+    if(!cookieSeg.puntos){
+    respuesta.cookie('puntos',100,{signed:true});
     }
-  }
+    if(!cookie.nombreUsuario) {
+        respuesta.cookie('nombreUsuario', 'Carolina');
+    }
+    if(cookieSeg.puntos <= 0){
+        respuesta.send("Se termino los puntos");
+    }
+    if(query.numero1!=null && query.numero2!=null){
+        const resultado = Number(query.numero1) * Number(query.numero2);
+        console.log("Resultado de la suma es: "+resultado);
+        const resultadoJson = {
+            'nombreUsuario':cookie.nombreUsuario,
+            'resultado':resultado
+        }
+        const resto = cookieSeg.puntos - resultado;
+        cookieSeg.puntos = resto;
+        console.log(cookieSeg.puntos);
+        respuesta.cookie('puntos',resto,{signed:true})
+
+        return respuesta.status(200).send(resultadoJson);
+    }
+    else{
+        return respuesta.status(400).send('Error de parametros');
+    }
+
+    }
 
   @Delete('/division')
   @HttpCode(203)
