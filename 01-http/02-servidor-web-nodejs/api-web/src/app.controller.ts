@@ -158,9 +158,23 @@ export class AppController {
     inicio(
         @Response() res
     ){
-        return res.render('inicio');
+        return res.render(
+            'inicio.ejs',
+            {
+                estaVivo:true
+            });
     }
 
+    @Get('peliculas')
+    peliculas(
+        @Response()res
+    ){
+        return res.render(
+            'peliculas/inicio.ejs',
+            {
+
+            });
+    }
     // js -> ts
 
 
@@ -300,7 +314,7 @@ if({}){//Trutty
     console.log('Falso "0"');
 }
 
-
+/*
 //OPERADORES DE ARREGLOS EN JS
 
 const  arreglo=[
@@ -428,3 +442,4 @@ console.log()
     })
 
 
+*/
