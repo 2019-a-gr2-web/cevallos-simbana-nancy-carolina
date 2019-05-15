@@ -14,6 +14,8 @@ import {map} from "rxjs/operators";
 // @Controller(segmentoInicial)
 @Controller('/api')
 export class AppController {
+
+    arregloUsuarios=[];
     constructor(private readonly appService: AppService) {
     }
 

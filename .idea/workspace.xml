@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d3162bc1-0e27-439e-9df0-12566a281521" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/peliculas/estilos.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/peliculas/estilos.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.controller.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,11 +19,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.controller.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3026">
-              <caret line="183" column="31" selection-start-line="183" selection-start-column="31" selection-end-line="183" selection-end-column="31" />
+            <state relative-caret-position="-2586">
+              <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
               <folding>
                 <element signature="e#0#114#0" expanded="true" />
               </folding>
@@ -40,14 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/peliculas/estilos.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="148" column="29" lean-forward="true" selection-start-line="148" selection-start-column="29" selection-end-line="148" selection-end-column="29" />
-              <folding>
-                <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-              </folding>
+            <state relative-caret-position="833">
+              <caret line="180" lean-forward="true" selection-start-line="180" selection-end-line="180" />
             </state>
           </provider>
         </entry>
@@ -103,8 +100,8 @@
         <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/peliculas/inicio.ejs.html" />
         <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/main.ts" />
         <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/peliculas/inicio.ejs" />
-        <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.controller.ts" />
         <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/peliculas/estilos.ejs" />
+        <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.controller.ts" />
       </list>
     </option>
   </component>
@@ -121,6 +118,52 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="cevallos-simbana-nancy-carolina" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cevallos-simbana-nancy-carolina" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cevallos-simbana-nancy-carolina" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cevallos-simbana-nancy-carolina" type="462c0819:PsiDirectoryNode" />
+              <item name="01-http" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cevallos-simbana-nancy-carolina" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cevallos-simbana-nancy-carolina" type="462c0819:PsiDirectoryNode" />
+              <item name="01-http" type="462c0819:PsiDirectoryNode" />
+              <item name="01-servidor-web-estatico" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cevallos-simbana-nancy-carolina" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cevallos-simbana-nancy-carolina" type="462c0819:PsiDirectoryNode" />
+              <item name="01-http" type="462c0819:PsiDirectoryNode" />
+              <item name="01-servidor-web-estatico" type="462c0819:PsiDirectoryNode" />
+              <item name="02-servidor-web-node.js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cevallos-simbana-nancy-carolina" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cevallos-simbana-nancy-carolina" type="462c0819:PsiDirectoryNode" />
+              <item name="01-http" type="462c0819:PsiDirectoryNode" />
+              <item name="01-servidor-web-estatico" type="462c0819:PsiDirectoryNode" />
+              <item name="02-servidor-web-node.js" type="462c0819:PsiDirectoryNode" />
+              <item name="api-web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cevallos-simbana-nancy-carolina" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cevallos-simbana-nancy-carolina" type="462c0819:PsiDirectoryNode" />
+              <item name="01-http" type="462c0819:PsiDirectoryNode" />
+              <item name="01-servidor-web-estatico" type="462c0819:PsiDirectoryNode" />
+              <item name="02-servidor-web-node.js" type="462c0819:PsiDirectoryNode" />
+              <item name="api-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -176,52 +219,6 @@
               <item name="api-web" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="peliculas" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="cevallos-simbana-nancy-carolina" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cevallos-simbana-nancy-carolina" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cevallos-simbana-nancy-carolina" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cevallos-simbana-nancy-carolina" type="462c0819:PsiDirectoryNode" />
-              <item name="01-http" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cevallos-simbana-nancy-carolina" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cevallos-simbana-nancy-carolina" type="462c0819:PsiDirectoryNode" />
-              <item name="01-http" type="462c0819:PsiDirectoryNode" />
-              <item name="01-servidor-web-estatico" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cevallos-simbana-nancy-carolina" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cevallos-simbana-nancy-carolina" type="462c0819:PsiDirectoryNode" />
-              <item name="01-http" type="462c0819:PsiDirectoryNode" />
-              <item name="01-servidor-web-estatico" type="462c0819:PsiDirectoryNode" />
-              <item name="02-servidor-web-node.js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cevallos-simbana-nancy-carolina" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cevallos-simbana-nancy-carolina" type="462c0819:PsiDirectoryNode" />
-              <item name="01-http" type="462c0819:PsiDirectoryNode" />
-              <item name="01-servidor-web-estatico" type="462c0819:PsiDirectoryNode" />
-              <item name="02-servidor-web-node.js" type="462c0819:PsiDirectoryNode" />
-              <item name="api-web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cevallos-simbana-nancy-carolina" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cevallos-simbana-nancy-carolina" type="462c0819:PsiDirectoryNode" />
-              <item name="01-http" type="462c0819:PsiDirectoryNode" />
-              <item name="01-servidor-web-estatico" type="462c0819:PsiDirectoryNode" />
-              <item name="02-servidor-web-node.js" type="462c0819:PsiDirectoryNode" />
-              <item name="api-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -299,12 +296,13 @@
       <workItem from="1557342478483" duration="6296000" />
       <workItem from="1557369374468" duration="588000" />
       <workItem from="1557380361754" duration="47000" />
-      <workItem from="1557861230686" duration="4665000" />
+      <workItem from="1557861230686" duration="4833000" />
+      <workItem from="1557947009759" duration="1296000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82662000" />
+    <option name="totallyTimeSpent" value="84126000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -317,7 +315,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4983165" visible="true" weight="0.17633928" />
       <window_info id="Structure" order="1" sideWeight="0.5016835" side_tool="true" weight="0.18026102" />
@@ -332,8 +329,8 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32986626" />
       <window_info anchor="bottom" id="TypeScript" order="9" weight="0.34640524" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.7864583" visible="true" weight="0.23832528" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.21354167" side_tool="true" visible="true" weight="0.23832528" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.78571427" visible="true" weight="0.23832528" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.21428572" side_tool="true" visible="true" weight="0.23832528" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -579,13 +576,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.controller.ts">
+    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/inicio.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3026">
-          <caret line="183" column="31" selection-start-line="183" selection-start-column="31" selection-end-line="183" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#114#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="153">
+          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -606,19 +600,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/inicio.ejs">
+    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/peliculas/estilos.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+        <state relative-caret-position="833">
+          <caret line="180" lean-forward="true" selection-start-line="180" selection-end-line="180" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/peliculas/estilos.ejs">
+    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.controller.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="148" column="29" lean-forward="true" selection-start-line="148" selection-start-column="29" selection-end-line="148" selection-end-column="29" />
+        <state relative-caret-position="-2586">
+          <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
           <folding>
-            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="e#0#114#0" expanded="true" />
           </folding>
         </state>
       </provider>
