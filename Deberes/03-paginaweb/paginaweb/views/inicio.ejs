@@ -24,6 +24,7 @@
         .logo {
             width: 100%;
             vertical-align: bottom;
+            position: relative;
         }
         .links-encabezado {
             text-align: right;
@@ -72,6 +73,9 @@
             width: 300px;
             text-align: center;
         }
+        .tabla-responsive{
+            width: 100%;
+        }
 
         .separador{
             margin-top:20px;
@@ -96,7 +100,7 @@
         </div>
         <div class="col-md-12">
             <div class="encabezado">
-                <table class="table">
+                <table class="table tabla-responsive">
                     <tr>
                         <td>Personas <i class="fa fa-angle-down"></i></td>
                         <td>Empresas <i class="fa fa-angle-down"></i></td>
@@ -123,7 +127,7 @@
 
 <div class="row">
     <div class="col-md-12 menu-banco">
-        <table class="t">
+        <table class="table tabla-responsive">
             <tr>
                 <th><button class="btn btn-lg btn-gold">Cuentas</button></th>
                 <th><button class="btn btn-lg btn-gold">Tarjetas</button></th>
@@ -133,9 +137,11 @@
             </tr>
         </table>
     </div>
+</div>
+<div class="row">
     <div class="col-md-12">
         <div class="logo">
-            <img src="/imagenes/fondo-ahorros.png" alt="">
+            <img class="logo" src="/imagenes/fondo-ahorros.png" alt="">
         </div>
     </div>
 </div>
