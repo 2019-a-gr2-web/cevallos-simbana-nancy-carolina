@@ -5,5 +5,7 @@
     <mapping directory="$PROJECT_DIR$/Deberes/01-calculadora/calculadora" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Deberes/02-cookies/02-cookie-segura" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Deberes/02-cookies/1-cookie-segura" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Deberes/03-pagina-web/pagina-web" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Deberes/03-paginaweb/paginaweb" vcs="Git" />
   </component>
 </project>
