@@ -6,6 +6,4 @@ export interface Producto {
     precio:number;
     fechaLanzamientoProducto:Date;
     anioGarantia:number;
-
-
 }

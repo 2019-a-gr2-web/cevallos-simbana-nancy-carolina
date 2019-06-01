@@ -8,7 +8,7 @@ export class LoginService {
         if(cookieSegura.usuario){
              return true;
         }else{
-            res.redirect('login');
+            res.redirect('/api/login');
         }
     }
 }

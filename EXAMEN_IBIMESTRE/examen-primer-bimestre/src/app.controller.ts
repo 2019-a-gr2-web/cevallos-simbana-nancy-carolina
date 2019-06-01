@@ -2,10 +2,11 @@ import {Controller, Get, Res, Req, Post, Body} from '@nestjs/common';
 import { AppService } from './app.service';
 import {LoginService} from "./Login/login.service";
 import {ResponseError} from "superagent";
+import {TiendaServices} from "./Tienda/tienda.services";
 
 @Controller('/api')
 export class AppController {
-  constructor(private readonly _loginService:LoginService) {}
+  constructor(private readonly _loginService:LoginService,private readonly _tiendaServices:TiendaServices) {}
 
   @Get()
   inicio(
@@ -55,6 +56,20 @@ export class AppController {
     ).redirect('/api/menu');
   }
 
+
+  @Get('lista')
+  gestion(
+      @Res() res,
+      @Req() req
+  ){
+    const listaTienda = this._tiendaServices.bddTiendas;
+    if(this._loginService.validarCookies(req,res)){
+      res.render('Tienda/gestiontienda.ejs',{
+        usuario:req.signedCookies.usuario,
+        listaTienda:listaTienda
+      });
+    }
+  }
 
 
 

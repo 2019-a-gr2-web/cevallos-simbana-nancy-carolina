@@ -3,24 +3,27 @@ import {TiendaServices} from "./tienda.services";
 import {LoginService} from "../Login/login.service";
 import {TiendaModule} from "./tienda.module";
 import {Tienda} from "../interfaces/tienda";
+import {ProductoService} from "../Productos/producto.service";
 
 @Controller('/api/tienda')
 
 export class TiendaController {
-    constructor(private readonly  _loginService:LoginService, private readonly _tiendaServices:TiendaServices){
+    constructor(private readonly  _loginService:LoginService, private readonly _tiendaServices:TiendaServices, private readonly _productoServices:ProductoService){
 
     }
 
-    @Get('gestionar')
-    gestion(
+    @Get('gestion/:idPadre')
+    gestionar(
         @Res() res,
         @Req() req
     ){
-        const listaTienda = this._tiendaServices.bddTiendas;
+        const listaProducto = this._productoServices.filtrar(Number(req.params.idPadre));
+        console.log(req.params.idPadre);
         if(this._loginService.validarCookies(req,res)){
-            res.render('Tienda/gestiontienda.ejs',{
+            res.render('Productos/gestionproductos.ejs',{
                 usuario:req.signedCookies.usuario,
-                listaTienda:listaTienda
+                listaProducto:listaProducto,
+                idPadre:Number(req.params.idPadre)
             });
         }
     }
@@ -31,7 +34,7 @@ export class TiendaController {
         @Body('tiendaId') tiendaId
     ){
         this._tiendaServices.eliminar(Number(tiendaId));
-        res.redirect('/api/tienda/gestionar')
+        res.redirect('/api/lista')
     }
 
     @Get('crear')
@@ -58,7 +61,7 @@ export class TiendaController {
         tienda.fechaApertura=new Date(tienda.fechaApertura);
         tienda.matriz=tienda.matriz;
         this._tiendaServices.crear(tienda);
-        res.redirect('/api/tienda/gestionar');
+        res.redirect('/api/lista');
     }
 
     @Post('buscar')

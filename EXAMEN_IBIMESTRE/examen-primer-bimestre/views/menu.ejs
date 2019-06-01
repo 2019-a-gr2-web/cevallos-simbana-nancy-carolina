@@ -8,14 +8,19 @@
     <title>Tienda</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <style>
-
+        .espacio{
+            height: 150px;
+        }
+        .cabecera{
+            padding-top:20px;
+        }
     </style>
 </head>
 <body>
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            <div class="row text-right">
+            <div class="cabecera row text-right">
                 <div class="col-sm-6">
                     <span class="text-sm-right"> <%=usuario%></span>
                 </div>
@@ -25,12 +30,12 @@
                     </a>
                 </div>
 
-
             </div>
-
+            <div class="espacio"></div>
+            <div class="espacio"></div>
             <div class="row text-center">
                 <div class="col-sm-12">
-                    <a href="http://localhost:3000/api/tienda/gestionar">
+                    <a href="http://localhost:3000/api/lista">
                         <button  type="button" class="btn btn-sm btn-primary">Gestionar tiendas</button>
                     </a>
                 </div>
