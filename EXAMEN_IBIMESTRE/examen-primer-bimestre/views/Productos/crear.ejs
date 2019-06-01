@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tienda</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="col-sm-12">
+        <div class="form-group row text-right">
+            <div class="col-sm-6">
+                <span class="text-sm-right"> <%=usuario%></span>
+            </div>
+            <div class="col-sm-6">
+                <a href="http://localhost:3000/api/login">
+                    <button  type="button" class="btn btn-sm btn-primary">Salir</button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12">
+        <form action="/api/producto/crear" class="form-horizontal" method="post">
+            <div class="form-group row">
+                <label for="nombreId" class="control-label col-sm-2">Nombre:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="nombreId" name="nombre">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="rucId" class="control-label col-sm-2">Ruc:</label>
+                <div class="col-sm-10">
+                    <input type="number" class="form-control" id="rucId" name="ruc">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="fechaId" class="control-label col-sm-2">Fecha apertura::</label>
+                <div class="col-sm-10">
+                    <input type="date" class="form-control" id="fechaId" name="fechaApertura">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="matrizId" class="control-label col-sm-2">Matriz:</label>
+                <div class="col-sm-10">
+                    <input type="checkbox" class="form-control" id="matrizId" name="matriz">
+                </div>
+            </div>
+            <div class="form-group row">
+                <button type="submit" class="btn btn-sm btn-primary">Guardar</button>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+</body>
+</html>
