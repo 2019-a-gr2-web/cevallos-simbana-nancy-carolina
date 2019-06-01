@@ -172,7 +172,7 @@ export class AppController {
         @Response()res
     ){
         return res.render(
-            'peliculas/inicio.ejs',
+            'peliculas/iniciosesion.ejs',
             {
 
             });
