@@ -5,35 +5,35 @@ import {Tienda} from "../interfaces/tienda";
 import {Query} from "@nestjs/common/decorators/http/route-params.decorator";
 import {Producto} from "../interfaces/Producto";
 
-@Controller('api/producto')
+@Controller('api/tienda/gestion')
 export  class ProductoController {
     constructor(private readonly _productoServices:ProductoService, private readonly _loginService:LoginService){
 
     }
 
-    @Get('gestionar/:idPadre')
+    @Get(':idPadre')
     gestionar(
         @Res() res,
         @Req() req
     ){
-        const listaProducto = this._productoServices.bddProducto;
-        console.log(req.params.idPadre);
+        let listaProducto:Producto []= this._productoServices.filtrar(Number(req.params.idPadre));
+        console.log(listaProducto);
         if(this._loginService.validarCookies(req,res)){
             res.render('Productos/gestionproductos.ejs',{
                 usuario:req.signedCookies.usuario,
                 listaProducto:listaProducto,
-                idPadre:req.params.idPadre
+                idPadre:Number(req.params.idPadre)
             });
         }
     }
 
-    @Post('eliminar')
+    @Post('eliminar/:idPadre')
     eliminar(
         @Res() res,
         @Req() req,
-        @Body('idProducto')idProducto ){
-        this._productoServices.eliminar(Number(idProducto));
-        res.redirect('/api/producto/gestionar/'+Number(idProducto));
+        @Body('idProducto')idProducto:number ){
+        this._productoServices.eliminar(idProducto,Number(req.params.idPadre));
+        res.redirect('/api/tienda/gestion/'+Number(req.params.idPadre));
     }
 
     @Get('crear/:idPadre')
@@ -49,25 +49,20 @@ export  class ProductoController {
         }
     }
 
-    @Post('crear')
+    @Post('crear/:idPadre')
     crearPost(
         @Res() res,
         @Body() producto:Producto,
         @Req() req
     ){
-        producto.idPadre=Number(producto.idPadre);
+        producto.idPadre=Number(req.params.idPadre);
         producto.nombre=producto.nombre;
         producto.descripcion=producto.descripcion;
         producto.precio=Number(producto.precio);
         producto.fechaLanzamientoProducto=new Date(producto.fechaLanzamientoProducto);
         producto.anioGarantia=Number(producto.anioGarantia);
         this._productoServices.crear(producto);
-        res
-            .render('Productos/gestionproductos.ejs',{
-                usuario:req.signedCookies.usuario,
-                listaProducto:this._productoServices.bddProducto,
-                idPadre:req.params.idPadre
-            });
+        res.redirect('/api/tienda/gestion/'+Number(producto.idPadre))
     }
 
     @Post('buscar/:idPadre')

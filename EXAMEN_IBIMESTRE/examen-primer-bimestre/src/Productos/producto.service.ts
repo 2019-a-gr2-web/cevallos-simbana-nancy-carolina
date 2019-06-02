@@ -5,7 +5,7 @@ import {Tienda} from "../interfaces/tienda";
 @Injectable()
 export class ProductoService {
     bddProducto:Producto[]=[];
-    listaProducto=[];
+    bddTemp:Producto[]=[];
     numProductos=1;
 
     crear(nuevoProducto:Producto){
@@ -14,19 +14,23 @@ export class ProductoService {
         this.bddProducto.push(nuevoProducto);
         return nuevoProducto;
     }
+    ingresarTemo(listaBusqueda){
+
+    }
 
     filtrar(id:number):Producto[]{
-        return this.bddProducto.filter(
+        this.bddTemp= this.bddProducto.filter(
             (producto)=>{
                 return producto.idPadre===id;
             }
         );
+        return this.bddTemp;
     }
 
-    eliminar(id:number){
+    eliminar(id:number,idPadre:number){
         const indice=this.bddProducto.findIndex(
             (producto)=>{
-                return producto.idProducto===id;
+                return (producto.idProducto===id && producto.idPadre==idPadre);
             }
         );
         this.bddProducto.splice(indice,1);
@@ -35,19 +39,19 @@ export class ProductoService {
 
     buscarPorNombre(id:number,nombre: string):Producto[] {
         if(nombre!=='' && nombre!==null){
-            return this.bddProducto.filter(
+            this.bddTemp= this.bddProducto.filter(
                 (producto)=>{
                      return (producto.idPadre===id && producto.nombre .toUpperCase().includes(nombre.toUpperCase()));
                 }
             );
         }else{
-            return this.bddProducto.filter(
+            this.bddTemp= this.bddProducto.filter(
                 (producto)=>{
                     return producto.idPadre===id;
                 }
             )
         }
-
+        return  this.bddTemp
     }
 
     constructor(){

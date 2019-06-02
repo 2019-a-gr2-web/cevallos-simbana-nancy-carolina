@@ -32,7 +32,7 @@
     </div>
     <div class="espacio"></div>
     <div class="col-sm-12">
-        <form action="/api/producto/buscar/<%=idPadre%>" class="form-horizontal" method="post">
+        <form action="/api/tienda/gestion/buscar/<%=idPadre%>" class="form-horizontal" method="post">
             <div class="form-group row">
                 <div class="col-sm-10">
                     <input type="text" class="form-control" id="busquedaId" placeholder="Busqueda" name="busqueda">
@@ -47,7 +47,7 @@
         <div class="form-group row text-right">
             <div class="col-sm-12">
 
-                <a href="http://localhost:3000/api/producto/crear/<%=idPadre%>">
+                <a href="http://localhost:3000/api/tienda/gestion/crear/<%=idPadre%>">
                     <button type="button" class="btn btn-sm btn-primary">Crear</button>
                 </a>
 
@@ -79,7 +79,7 @@
                         <td><%= producto.fechaLanzamientoProducto %></td>
                         <td><%= producto.anioGarantia%> </td>
                         <td>
-                            <form action="/api/producto/eliminar" method="post">
+                            <form action="/api/tienda/gestion/eliminar/<%=idPadre%>" method="post">
                                 <input type="text" name="idProducto" hidden value="<%=producto.idProducto%> ">
                                 <button type="submit" class="btn btn-xs btn-info">Borrar</button>
                             </form>
