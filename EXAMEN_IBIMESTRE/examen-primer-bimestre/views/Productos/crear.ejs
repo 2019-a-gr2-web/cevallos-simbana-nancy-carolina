@@ -38,13 +38,7 @@
     </div>
 
     <div class="col-sm-12">
-        <form action="/api/producto/crear" class="form-horizontal" method="post">
-            <div class="form-group row hidden">
-                <label for="padreId" class="control-label col-sm-2">Nombre:</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="padreId" name="idPadre" value="<%=idPadre%>">
-                </div>
-            </div>
+        <form action="/api/tienda/gestion/crear/<%=idPadre%>" class="form-horizontal" method="post">
             <div class="form-group row">
                 <label for="nombreId" class="control-label col-sm-2">Nombre:</label>
                 <div class="col-sm-10">

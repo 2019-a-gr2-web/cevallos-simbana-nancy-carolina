@@ -4,6 +4,7 @@ import {LoginService} from "../Login/login.service";
 import {TiendaModule} from "./tienda.module";
 import {Tienda} from "../interfaces/tienda";
 import {ProductoService} from "../Productos/producto.service";
+import {Producto} from "../interfaces/Producto";
 
 @Controller('/api/tienda')
 
@@ -12,13 +13,13 @@ export class TiendaController {
 
     }
 
-    @Get('gestion/:idPadre')
+    /*@Get('gestion/:idPadre')
     gestionar(
         @Res() res,
         @Req() req
     ){
-        const listaProducto = this._productoServices.filtrar(Number(req.params.idPadre));
-        console.log(req.params.idPadre);
+        let listaProducto:Producto []= this._productoServices.filtrar(Number(req.params.idPadre));
+        console.log(listaProducto);
         if(this._loginService.validarCookies(req,res)){
             res.render('Productos/gestionproductos.ejs',{
                 usuario:req.signedCookies.usuario,
@@ -26,7 +27,7 @@ export class TiendaController {
                 idPadre:Number(req.params.idPadre)
             });
         }
-    }
+    }*/
 
     @Post('eliminar')
     eliminar(
