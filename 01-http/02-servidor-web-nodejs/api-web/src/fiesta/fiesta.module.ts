@@ -1,27 +1,25 @@
 import {Module} from "@nestjs/common";
-import {TragosController} from "./tragos.controller";
-import {TragosServices} from "./tragos.services";
 import { TypeOrmModule } from '@nestjs/typeorm';
-import {TragosEntity} from "./tragos.entity";
+import {FiestaEntity} from "./fiesta.entity";
 @Module({
     imports:[
         TypeOrmModule.forFeature(
             [
-                TragosEntity
+                FiestaEntity
             ],
             'default'
         ),
     ],//modulos
     controllers:[
-        TragosController
+
     ],//controladores
     providers:[
-        TragosServices
+
     ],//servicios
     exports:[
-        TragosServices
+
     ]//websockets
 })
-export class  TragosModule {
+export class  FiestaModule {
 
 }
