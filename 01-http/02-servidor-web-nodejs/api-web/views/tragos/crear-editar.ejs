@@ -1,3 +1,11 @@
+<%const nombreUsuario='Caro'%>
+<%- include('../Componentes/menu/menu',{nombre:nombreUsuario})%>
+
+
+<% const existeMensaje = mensaje%>
+<%if(existeMensaje){%>
+    <p>ERROR EN EL FORMULARIO <%=mensaje%></p>
+<%}%>
 
 <h1>Formulario de Creación</h1>
 <p>Crea un nuevo trago.</p>
@@ -44,3 +52,5 @@
 
 
 </form>
+
+<%- include('../Componentes/footer/footer')%>
