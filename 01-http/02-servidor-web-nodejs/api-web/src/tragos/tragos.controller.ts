@@ -1,6 +1,8 @@
-import {Body, Controller, Get, Post, Res} from "@nestjs/common";
+import {Body, Controller, Get, Post, Query, Res} from "@nestjs/common";
 import {TragosServices} from "./tragos.services";
 import {Trago} from "./interfaces/trago";
+import {validate} from "class-validator";
+import {TragosCreateDto} from "./dto/tragos.create.dto";
 
 @Controller('/api/traguito')
 
@@ -21,10 +23,11 @@ export  class  TragosController {
 
     @Get('crear')
     crear(
-        @Res() res
+        @Res() res,
+        @Query('mensaje')mensaje:string,
     ){
         res.render('tragos/crear-editar',{
-
+            mensaje: mensaje
         })
     }
 
@@ -41,14 +44,35 @@ export  class  TragosController {
     ){
         trago.gradoAlcohol=Number(trago.gradoAlcohol);
         trago.precio=Number(trago.precio);
-        trago.fechaCaducidad=new Date(trago.fechaCaducidad);
+        trago.fechaCaducidad = trago.fechaCaducidad ? new Date(trago.fechaCaducidad) : undefined;
         console.log(trago)
 
-        try{
-            const respuestarCrear = await this._tragosService.crear(trago); //Promise
+        let tragoAValidar = new TragosCreateDto();
 
-            console.log('RESPUESTA :',respuestarCrear);
-            res.redirect('/api/traguito/lista')
+        tragoAValidar.nombre = trago.nombre;
+        tragoAValidar.tipo = trago.tipo;
+        tragoAValidar.fechaCaducidad = trago.fechaCaducidad;
+        tragoAValidar.precio = trago.precio;
+        tragoAValidar.gradosAlcohol = trago.gradosAlcohol;
+
+        try{
+            const errores=await validate(tragoAValidar)
+            console.log(errores);
+            console.log(tragoAValidar);
+            console.log(trago);
+            if (errores.length > 0) {
+
+                res.redirect('/api/traguito/crear?mensaje=Tienes un error en el formulario&campos=');
+            } else {
+
+                const respuestaCrear = await this._tragosService
+                    .crear(trago); // Promesa
+
+                console.log('RESPUESTA: ', respuestaCrear);
+
+                res.redirect('/api/traguito/lista');
+            }
+
         }
         catch (e) {
             console.error((e));
