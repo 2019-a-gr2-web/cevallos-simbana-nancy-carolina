@@ -53,7 +53,7 @@ export  class  TragosController {
         tragoAValidar.tipo = trago.tipo;
         tragoAValidar.fechaCaducidad = trago.fechaCaducidad;
         tragoAValidar.precio = trago.precio;
-        tragoAValidar.gradosAlcohol = trago.gradosAlcohol;
+        tragoAValidar.gradoAlcohol = trago.gradoAlcohol;
 
         try{
             const errores=await validate(tragoAValidar)

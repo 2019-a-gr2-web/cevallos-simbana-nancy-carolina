@@ -1,4 +1,18 @@
-import {Controller,Get,HttpCode,Post,Put, Delete,Headers,Query,Param,Body,Request,Response} from '@nestjs/common';
+import {
+    Controller,
+    Get,
+    HttpCode,
+    Post,
+    Put,
+    Delete,
+    Headers,
+    Query,
+    Param,
+    Body,
+    Request,
+    Response,
+    Session, Res
+} from '@nestjs/common';
 import {AppService} from './app.service';
 
 
@@ -185,6 +199,65 @@ export class AppController {
         return res.render(
             'peliculas/estilos');
     }
+
+    @Get('session')
+    session(
+        @Query('nombre') nombre,
+        @Session() session
+    ){
+        console.log(session);
+        session.autenticado=true
+        session.nombreUsuario=nombre;
+        return 'ok';
+    }
+
+
+    @Get()
+    loginVista(
+        @Res()res
+    ){
+        res.render('login');
+    }
+
+    @Post('login')
+    login(
+        @Body() usuario,
+        @Session() session,
+        @Res() res
+    ){
+        if(usuario.username === 'adrian' && usuario.password === '12345678'){
+            //    QUE HACEMOS
+            session.username = usuario.username;
+            res.redirect('/protegida');
+        }else{
+            res.status(400);
+            res.send({mensaje:'Error login',error:400})
+        }
+    }
+
+    @Get('protegida')
+    protegida(
+        @Session() session,
+        @Res() res
+    ){
+        if(session.username){
+            res.render('protegida',{
+                nombre:session.username});
+        }else{
+            res.redirect('/login');
+        }
+    }
+
+    @Get('logout')
+    logout(
+        @Res() res,
+        @Session() session,
+    ){
+        session.username = undefined;
+        session.destroy();
+        res.redirect('/api/login');
+    }
+
     // js -> ts
 
 

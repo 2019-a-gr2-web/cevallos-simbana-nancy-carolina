@@ -4,7 +4,7 @@ import {TragosEntity} from "./tragos.entity";
 import {Repository} from "typeorm";
 import {InjectRepository} from "@nestjs/typeorm";
 import {TragosEntity} from "./tragos.entity";
-import {Repository} from "typeorm";
+//import {Repository} from "typeorm";
 
 @Injectable()
 export class TragosServices{
@@ -12,7 +12,7 @@ export class TragosServices{
     bddTragos:Trago[]=[];
     recnum=1;
 
-    constructor(@InjectRepository(TragosEntity)
+   /* constructor(@InjectRepository(TragosEntity)
                 private readonly _tragosRepository: Repository<TragosEntity>,){
         const traguito:Trago = {
             nombre:'Pilsener',
@@ -21,7 +21,7 @@ export class TragosServices{
             precio:1.75,
             tipo:'Cerveza'
         };
-        const objetoEntidad=this._tragosRepository.create(traguito);
+        //const objetoEntidad=this._tragosRepository.create(traguito);
 
         console.log('LINEA 1')
         this._tragosRepository
@@ -41,10 +41,10 @@ export class TragosServices{
 
         console.log('LINEA 4');
 
-        this.crear(traguito);
-    }
+        //this.crear(traguito);
+    }*/
 
-
+/*
     buscar(paramentrosBusqueda?):Promise<TragosEntity[]>{
         return this._tragosRepository.find(paramentrosBusqueda);
     }
@@ -55,9 +55,9 @@ export class TragosServices{
         //this.bddTragos.push(nuevoTrago);
         //return nuevoTrago
 
-        const objetoEntidad=this._tragosRepository
-            .create(nuevoTrago);
-        return  this._tragosRepository.save(objetoEntidad);
+        //const objetoEntidad=this._tragosRepository
+        //    .create(nuevoTrago);
+        //return  this._tragosRepository.save(objetoEntidad);
     }
     buscarPorId(id:number){
         this.bddTragos.find(
@@ -92,7 +92,7 @@ export class TragosServices{
                 return trago.nombre.toUpperCase().includes(nombre.toUpperCase());
             }
         );
-    }
+    }*/
 
 
 }
