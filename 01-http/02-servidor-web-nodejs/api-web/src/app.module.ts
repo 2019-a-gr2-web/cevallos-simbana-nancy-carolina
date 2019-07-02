@@ -8,9 +8,11 @@ import {DistribuidorModule} from "./distribudor/distribuidor.module";
 import {FiestaModule} from "./fiesta/fiesta.module";
 import {DistribuidorEntity} from "./distribudor/distribuidor.entity";
 import {FiestaEntity} from "./fiesta/fiesta.entity";
+import {ChatModule} from "./chat/chat.module";
 
 @Module({
   imports: [
+      ChatModule/*
     TragosModule,
     DistribuidorModule,
     FiestaModule,
@@ -28,7 +30,7 @@ import {FiestaEntity} from "./fiesta/fiesta.entity";
       synchronize: true,
       insecureAuth:true,
       dropSchema:true,
-    })],
+    })*/],
   controllers: [AppController],
   providers: [AppService],
 })

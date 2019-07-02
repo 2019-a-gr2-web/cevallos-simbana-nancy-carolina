@@ -7,7 +7,8 @@ import * as path from 'path';
 import * as favicon from 'serve-favicon';
 // import * as cookieParser from 'cookie-parser'
 const cookieParser = require('cookie-parser');
-
+import * as session from 'express-session'; // Typescript
+const FileStore = require('session-file-store')(session); // Nodejs
 
 async function bootstrap() {
   const app = await NestFactory
