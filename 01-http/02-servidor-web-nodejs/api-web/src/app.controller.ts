@@ -11,13 +11,15 @@ import {
     Body,
     Request,
     Response,
-    Session, Res
+    Session, Res, Render, UseInterceptors, UploadedFile
 } from '@nestjs/common';
 import {AppService} from './app.service';
 
 
 import * as Joi from '@hapi/joi';
 import {map} from "rxjs/operators";
+
+import {FileInterceptor} from "@nestjs/platform-express";
 
 // const Joi = require('@hapi/joi');
 
@@ -32,6 +34,46 @@ export class AppController {
     arregloUsuarios=[];
     constructor(private readonly appService: AppService) {
     }
+
+    @Get('subirArchivo/:idTrago')
+    @Render('archivo.ejs')
+    subirArchivo(
+        @Param('idTrago') idTrago
+    ){
+        return{
+            idTrago:idTrago
+        };
+    }
+
+    @Post('subirArchivo/:idTrago')
+    @UseInterceptors(
+        FileInterceptor(
+            'imagen',
+            {
+                dest: __dirname + '/../archivos'
+            }
+        )
+    )
+    subirArchivoPost(
+        @Param('idTrago') idTrago,
+        @UploadedFile() archivo
+    ){
+        console.log(archivo);
+        return { mensaje: 'ok' };
+    }
+
+    @Get('descargarArchivo/:idTrago')
+    descargarArchivo(
+        @Res() res,
+        @Param('idTrago')idTrago
+    ){
+        const originalname='koala.jpg';
+        const path='C:\\Users\\Carolina\\Documents\\GitHub\\cevallos-simbana-nancy-carolina\\01-http\\02-servidor-web-nodejs\\api-web\\archivos\\02191f33087c121761a69399814d0e3b'
+        res.download(path,originalname)
+    }
+
+
+
 
     // @Controller(segmentoAccion)
     @Get('/hello-world')  // METODO HTTP

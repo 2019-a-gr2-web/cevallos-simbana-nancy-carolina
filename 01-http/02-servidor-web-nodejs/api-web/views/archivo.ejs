@@ -1,0 +1,52 @@
+<img src="/api/descargarArchivo/<%= idTrago %>"
+     width="300px"
+     height="300px"
+     alt="">
+<a href="/api/descargarArchivo/<%= idTrago %>" target="_blank"> Descargar Archivo </a>
+<form
+        action="/api/subirArchivo/<%=idTrago%>"
+        method="post"
+        enctype="multipart/form-data"
+>
+    <label id="texto-archivo" for="archivo" class="boton boton-sin-seleccion">
+        Seleccionar Archivo
+    </label>
+    <input id="archivo"
+           hidden
+           type="file"
+           name="imagen"
+           accept=".pptx, .jpg"
+           multiple
+           onchange="validarArchivos()"
+
+    >
+
+    <button> Subir archivo</button>
+</form>
+<script>
+    function validarArchivos() {
+        const archivo = document.getElementById('archivo');
+        console.log(archivo.files);
+        const label = document.getElementById('texto-archivo');
+        if(archivo.files.length > 0){
+            label.className = 'boton boton-seleccionado';
+            label.innerText = 'Archivos seleccionados :) ';
+        }else{
+            label.className = 'boton boton-sin-seleccion';
+            label.innerText = 'Seleccionar archivo';
+        }
+    }
+</script>
+<style>
+    .boton{
+        border: solid black 2px;
+    }
+    .boton-seleccionado{
+        color: black;
+        background-color: lightgreen;
+    }
+    .boton-sin-seleccion{
+        color: white;
+        background-color: black;
+    }
+</style>
