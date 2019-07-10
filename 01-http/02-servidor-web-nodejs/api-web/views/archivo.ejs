@@ -1,7 +1,9 @@
-<img src="/api/descargarArchivo/<%= idTrago %>"
+<img id="imagenMuestra"
+     src="/api/descargarArchivo/<%= idTrago %>"
      width="300px"
      height="300px"
      alt="">
+
 <a href="/api/descargarArchivo/<%= idTrago %>" target="_blank"> Descargar Archivo </a>
 <form
         action="/api/subirArchivo/<%=idTrago%>"
@@ -36,6 +38,18 @@
             label.innerText = 'Seleccionar archivo';
         }
     }
+
+    const file = archivo.files[0];
+    const reader = new FileReader();
+    reader.onload = (eventoLecturaArchivo) => {
+        console.log(eventoLecturaArchivo.target.result);
+        const url = eventoLecturaArchivo.target.result;
+
+        const imagenMuestra = document.getElementById('imagenMuestra');
+        imagenMuestra.src = url;
+
+    };
+    reader.readAsDataURL(file);
 </script>
 <style>
     .boton{
