@@ -71,27 +71,36 @@
                 console.log("Estamos conectados");
             }
         );
+
+        socket.on(
+            'disconnect', // nombre del evento
+            () => {
+                console.log('=( nos desconectamos.');
+            }
+        );
+
+        socket.on(
+            'saludaron',
+            (data)=>{
+                console.log(data)
+                const nombreContenedor='contenedor-chat';
+                const etiqueta="p";
+                const parrafo=document.createElement(etiqueta);
+                const contenidoHTML=`
+                        <div class="alert alert-secondary text-left" role="alert">
+                          ${data.nombre}
+                        </div>
+                    `;
+                parrafo.innerHTML=contenidoHTML;
+                anadirEtiqueta(nombreContenedor,parrafo);
+            }
+        );
+
         function peticionHolaMundo(texto) {
             const nombreMetodo="holaMundo";
             const datos={
                 nombre:texto
             };
-            socket.on(
-                'saludaron',
-                (data)=>{
-                    console.log(data)
-                    const nombreContenedor='contenedor-chat';
-                    const etiqueta="p";
-                    const parrafo=document.createElement(etiqueta);
-                    const contenidoHTML=`
-                        <div class="alert alert-secondary text-left" role="alert">
-                          ${data.nombre}
-                        </div>
-                    `;
-                    parrafo.innerHTML=contenidoHTML;
-                    anadirEtiqueta(nombreContenedor,parrafo);
-                }
-            );
 
             socket.emit
             (

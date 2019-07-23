@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ganador</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<style>
+
+    table, tr, td {
+        border: 1px solid black;
+    }
+    td{
+        width: 50px;
+        height: 50px;
+
+    }
+    .derecho{
+        border-left-style:hidden;
+    }
+    .izquierdo{
+        border-right-style:hidden;
+    }
+    .inicio{
+        transform: rotate(270deg);
+        width: 50px;
+    }
+
+</style>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <button onclick="paso()">Mi turno</button>
+                <span id="mensaje-avance"></span>
+            </div>
+
+            <div class="col-xs-6">
+                <h3> Jugador </h3>
+                <table>
+                    <tr>
+                        <td class="inicio" id="nivel-0">Inicio</td>
+                        <td id="nivel-1"></td>
+                        <td id="nivel-2"></td>
+                    </tr>
+                    <tr>
+                        <td class="derecho"></td>
+                        <td class="derecho"></td>
+                        <td id="nivel-3"></td>
+                    </tr>
+                    <tr>
+                        <td id="nivel-6"></td>
+                        <td id="nivel-5"></td>
+                        <td id="nivel-4"></td>
+                    </tr>
+                    <tr>
+                        <td id="nivel-7"></td>
+                        <td class="izquierdo"></td>
+                        <td class="izquierdo"></td>
+                    </tr>
+                    <tr>
+                        <td id="nivel-8"></td>
+                        <td id="nivel-9"></td>
+                        <td id="nivel-10"></td>
+                    </tr>
+                    <tr>
+                        <td class="derecho"></td>
+                        <td class="derecho"></td>
+                        <td id="nivel-11"></td>
+                    </tr>
+                    <tr>
+                        <td id="nivel-14"></td>
+                        <td id="nivel-13"></td>
+                        <td id="nivel-12"></td>
+                    </tr>
+                    <tr>
+                        <td id="nivel-15"></td>
+                        <td class="izquierdo"></td>
+                        <td class="izquierdo"></td>
+                    </tr>
+                    <tr>
+                        <td id="nivel-16"></td>
+                        <td id="nivel-17"></td>
+                        <td id="nivel-18" class="inicio"> META</td>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="col-xs-6">
+                <h3> Competidor </h3>
+                <table>
+                    <tr>
+                        <td class="inicio" id="avanza-0">Inicio</td>
+                        <td id="avanza-1"></td>
+                        <td id="avanza-2"></td>
+                    </tr>
+                    <tr>
+                        <td class="derecho"></td>
+                        <td class="derecho"></td>
+                        <td id="avanza-3"></td>
+                    </tr>
+                    <tr>
+                        <td id="avanza-6"></td>
+                        <td id="avanza-5"></td>
+                        <td id="avanza-4"></td>
+                    </tr>
+                    <tr>
+                        <td id="avanza-7"></td>
+                        <td class="izquierdo"></td>
+                        <td class="izquierdo"></td>
+                    </tr>
+                    <tr>
+                        <td id="avanza-8"></td>
+                        <td id="avanza-9"></td>
+                        <td id="avanza-10"></td>
+                    </tr>
+                    <tr>
+                        <td class="derecho"></td>
+                        <td class="derecho"></td>
+                        <td id="avanza-11"></td>
+                    </tr>
+                    <tr>
+                        <td id="avanza-14"></td>
+                        <td id="avanza-13"></td>
+                        <td id="avanza-12"></td>
+                    </tr>
+                    <tr>
+                        <td id="avanza-15"></td>
+                        <td class="izquierdo"></td>
+                        <td class="izquierdo"></td>
+                    </tr>
+                    <tr>
+                        <td id="avanza-16"></td>
+                        <td id="avanza-17"></td>
+                        <td id="avanza-18" class="inicio"> META</td>
+                    </tr>
+
+                </table>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        let indice=0;
+
+        function paso() {
+            let paso = Math.floor((Math.random() * 5) +1);
+
+            avanzar(indice,paso);
+            indice+=paso;
+            let mensaje=document.getElementById("mensaje-avance");
+
+            mensaje.innerText="avanzaste "+paso+" pasos";
+        }
+
+        function avanzar(inicio,paso){
+            console.log(inicio,paso)
+            if(paso>0){
+                for(i=inicio;i<inicio+paso;i++){
+                    document.getElementById("nivel-"+i).style="background-color: green";
+
+                }
+                peticionHolaMundo(inicio,paso);
+            }else{
+                for(i=inicio;i>paso;i--){
+
+                    document.getElementById("nivel-"+i).style="background-color: white";
+                }
+            }
+
+        }
+
+    </script>
+
+    <script src="/websockets/socket.io.js"></script>
+
+    <script>
+
+        const url="http://localhost:3001/websockets";
+        const socket=io(url);
+        console.log("Ya mismito nos concectamos :D");
+        socket.on(
+            'connect',
+            ()=>{
+                console.log("Estamos conectados");
+            }
+        );
+
+        socket.on(
+            'disconnect', // nombre del evento
+            () => {
+                console.log('=( nos desconectamos.');
+            }
+        );
+
+        socket.on(
+            'saludaron',
+            (data)=>{
+                console.log(data)
+                for(i=data.indice;i<data.indice+data.avance;i++){
+                    document.getElementById("avanza-"+i).style="background-color: darkseagreen";
+                }
+                let mensaje=document.getElementById("mensaje-avance");
+                mensaje.innerText="avanzó "+data.avance+" pasos";
+            }
+        );
+
+        function peticionHolaMundo(inicio,paso) {
+            const nombreMetodo="holaMundo";
+            const datos={
+                indice:inicio,
+                avance:paso,
+            };
+
+            socket.emit
+            (
+                nombreMetodo,
+                datos,
+                (respuesta)=>{//callback
+                    console.log(respuesta)
+
+                }
+            )
+        }
+    </script>
+
+</body>
+</html>
