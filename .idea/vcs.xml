@@ -9,6 +9,7 @@
     <mapping directory="$PROJECT_DIR$/Deberes/03-paginaweb/paginaweb" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Deberes/04-web-socket/tres-en-raya" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/EXAMEN_IBIMESTRE/examen-primer-bimestre" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/EXAMEN_IIBIMESTRE/examen" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/poyecto individual/catalogo-ropa" vcs="Git" />
   </component>
 </project>

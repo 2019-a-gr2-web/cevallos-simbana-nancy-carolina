@@ -12,7 +12,7 @@ export class TragosServices{
     bddTragos:Trago[]=[];
     recnum=1;
 
-   /* constructor(@InjectRepository(TragosEntity)
+    constructor(@InjectRepository(TragosEntity)
                 private readonly _tragosRepository: Repository<TragosEntity>,){
         const traguito:Trago = {
             nombre:'Pilsener',
@@ -42,9 +42,9 @@ export class TragosServices{
         console.log('LINEA 4');
 
         //this.crear(traguito);
-    }*/
+    }
 
-/*
+
     buscar(paramentrosBusqueda?):Promise<TragosEntity[]>{
         return this._tragosRepository.find(paramentrosBusqueda);
     }
@@ -92,7 +92,7 @@ export class TragosServices{
                 return trago.nombre.toUpperCase().includes(nombre.toUpperCase());
             }
         );
-    }*/
+    }
 
 
 }
